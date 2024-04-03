@@ -1,0 +1,13 @@
+<p>administracion works!</p>
+<div class="admin-container">
+    <div class="options-container">
+      <label><input type="checkbox" [(ngModel)]="especialesChecked">Especiales</label>
+      <label><input type="checkbox" [(ngModel)]="empleadosChecked">Empleados</label>
+      <label><input type="checkbox" [(ngModel)]="mesasChecked">Mesas</label>
+      <label><input type="checkbox" [(ngModel)]="puestoChecked">Puesto</label>
+    </div>
+    <div class="button-container">
+      <button (click)="aceptar()">Aceptar</button>
+      <button (click)="volver()">Volver</button>
+    </div>
+  </div>

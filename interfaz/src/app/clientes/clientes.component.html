@@ -1,0 +1,63 @@
+<p>clientes works!</p>
+<div class="clientes-container">
+    <h2>Buscar Clientes</h2>
+
+    <div class="busqueda">
+        <label for="codigoCliente">Codigo Cliente:</label>
+        <input type="text" id="codigoCliente" [(ngModel)]="codigoCliente">
+
+        <label for="nombreCliente">Nombre Cliente:</label>
+        <input type="text" id="nombreCliente" [(ngModel)]="nombreCliente">
+
+        <label for="nombreRestaurante">Nombre del Restaurante:</label>
+        <input type="text" id="nombreRestaurante" [(ngModel)]="nombreRestaurante">
+
+        <label for="rangoFechas">Rango de Fechas:</label>
+        <input type="date" id="fechaInicio" [(ngModel)]="fechaInicio">
+        <input type="date" id="fechaFin" [(ngModel)]="fechaFin">
+
+        <label for="reservacion">Reservación:</label>
+        <select id="reservacion" [(ngModel)]="reservacion">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="barra">Estuvo en la Barra:</label>
+        <select id="barra" [(ngModel)]="barra">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <button (click)="buscarClientes()">Buscar</button>
+    </div>
+
+    <div class="lista-clientes" *ngIf="clientes.length > 0">
+        <h3>Lista de Clientes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre Completo</th>
+                    <th>Monto Pagado</th>
+                    <th>Detalle</th>
+                    <th>Fecha</th>
+                    <th>Reservación</th>
+                    <th>Barra</th>
+                    <th>Restaurante</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td>{{ cliente.codigo }}</td>
+                    <td>{{ cliente.nombreCompleto }}</td>
+                    <td>{{ cliente.montoPagado }}</td>
+                    <td>{{ cliente.detalle }}</td>
+                    <td>{{ cliente.fecha }}</td>
+                    <td>{{ cliente.reservacion }}</td>
+                    <td>{{ cliente.barra }}</td>
+                    <td>{{ cliente.restaurante }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

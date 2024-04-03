@@ -1,0 +1,23 @@
+<p>restaurante works!</p>
+<div class="main-interface">
+    <div class="formulario-container">
+        <button (click)="volver()">Volver</button>
+        <label>Código de restaurante:</label>
+        <input type="text" [(ngModel)]="codigoRestaurante">
+        
+        <label>Nombre de restaurante:</label>
+        <input type="text" [(ngModel)]="nombre">
+      
+        <label>Dirección:</label>
+        <input type="text" [(ngModel)]="direccion">
+      
+        <label>Cantidad de Clientes:</label>
+        <input type="number" [(ngModel)]="cantidadClientes">
+      
+        <label>Teléfono del Restaurante:</label>
+        <input type="tel" [(ngModel)]="telefono">
+      
+        <button (click)="limpiar()">Limpiar</button>
+        <button (click)="buscar()">Buscar</button>
+      </div>
+</div>
