@@ -1,0 +1,37 @@
+<p>usuarios works!</p>
+<div class="main-interface">
+    <div class="formulario-container">
+        <button routerLink="/Seguridad">Volver</button>
+        <label>Código:</label>
+        <input type="text" [(ngModel)]="codigo">
+
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="nombre">
+
+        <label>primer Apellido:</label>
+        <input type="text" [(ngModel)]="primerApellido">
+
+        <label>segundo Apellido:</label>
+        <input type="text" [(ngModel)]="segundoApellido">
+
+        <label>Teléfono 1:</label>
+        <input type="tel" [(ngModel)]="telefono">
+        <label>Teléfono 2:</label>
+        <input type="tel" [(ngModel)]="telefono2">
+
+        <button (click)="limpiar()">Limpiar</button>
+        <button (click)="buscar()">Buscar</button>
+    </div>
+    <div class="container">
+        <div class="privilegios-box">
+            <h2>Privilegios</h2>
+            <div class="checkboxes">
+                <label><input type="checkbox" name="privilege1"> Privilegio 1</label><br>
+                <label><input type="checkbox" name="privilege2"> Privilegio 2</label><br>
+                <label><input type="checkbox" name="privilege3"> Privilegio 3</label><br>
+                <label><input type="checkbox" name="privilege4"> Privilegio 4</label><br>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
